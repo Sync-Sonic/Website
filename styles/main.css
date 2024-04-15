@@ -2,13 +2,28 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    color: white;
+    font-weight: bold;
+    background-color: white;
+    /* Remove scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 80px;
+}
+
+.header:hover, .box:hover, .video-container:hover, .contact-us:hover { 
+    cursor: pointer;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
 }
 
 .header-box {
@@ -25,21 +40,40 @@ body, html {
 
 .container {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end; /* Lowered the boxes */
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: flex-start; 
     height: calc(100% - 160px);
 }
 
 .box {
-    width: 120px; /* Smaller and tighter boxes */
-    height: 120px; /* Smaller and tighter boxes */
-    border-radius: 10px; /* Smaller border radius */
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
     background-color: black;
+    margin: 50px;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 350px; /* Increased margin to lower down */
 }
+
+.details {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 102%;
+    text-align: center;
+}
+
 
 .box img {
     max-width: 70%;
@@ -59,13 +93,158 @@ body, html {
     height: 40px;
     border: 2px solid black;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .video-container {
-    width: 50%;
-    height: 100px;
-    width: 200px;
+    width: 31%;
+    height: 300px;
     border: 5px solid black;
-    border-radius: 10px;
+    border-radius: 18px;
     overflow: hidden;
+    margin: 300px 10px 10px 10px; /* Adjusted margin to move the video containers higher up */
+}
+
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.video-container video::-webkit-media-controls-start-playback-button,
+.video-container video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+/* Font */
+
+.title, .subtitle, .about-box, .meet-team, .name, .work, .check-out-our-beats, .check-out-our-work, .contact-us-here, .contact-us {
+    font-family: 'Lato', sans-serif;
+}
+
+.title {
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.subtitle {
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.about-us {
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.about-box {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.meet-team {
+    color: black;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+.name{
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+.work {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    margin-top: -50px;
+}
+
+.instagram {
+    width: 30px;
+    margin: 10px;
+}
+
+.contact-us-here, .contact-us {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-us {
+    font-size: 20px;
+}
+
+.contact-us-box {
+    border: 5px solid black;
+    border-radius: 18px;
+    text-align: center;
+}
+
+
+.check-out-our-beats {
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -400px;
+}
+
+.check-out-our-work {
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.volume-controls {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 20px;
+}
+
+.volume-control {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.volume-control img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+.volume-control p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.volume-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 450px;
+}
+.volume-container2 {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 450px;
 }
