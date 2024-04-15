@@ -1,0 +1,71 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+.header-box {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end; /* Lowered the boxes */
+    height: calc(100% - 160px);
+}
+
+.box {
+    width: 120px; /* Smaller and tighter boxes */
+    height: 120px; /* Smaller and tighter boxes */
+    border-radius: 10px; /* Smaller border radius */
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 350px; /* Increased margin to lower down */
+}
+
+.box img {
+    max-width: 70%;
+    max-height: 70%;
+    border-radius: 50%;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.footer-box {
+    width: 200px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.video-container {
+    width: 50%;
+    height: 100px;
+    width: 200px;
+    border: 5px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
