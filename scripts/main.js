@@ -1,4 +1,3 @@
-
 var videos = document.querySelectorAll("video");
 videos.forEach(function(video) {
     video.addEventListener("loadedmetadata", function() {

@@ -10,6 +10,12 @@ body, html {
     -ms-overflow-style: none;
 }
 
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -70,7 +76,8 @@ body, html {
     position: absolute;
     bottom: -100px;
     left: 0;
-    width: 102%;
+    width: 120%;
+    margin-left: -10px;
     text-align: center;
 }
 
@@ -107,7 +114,7 @@ body, html {
 
 
 .video-container video {
-    width: 100%;
+    width: 101%;
     height: 100%;
     object-fit: cover; 
 }
