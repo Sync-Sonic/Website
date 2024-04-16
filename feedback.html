@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/feedback.css">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <div class="header-box" id="home-header">
+                HOME
+            </div>
+            <div class="header-box">
+                VIDEOS
+            </div>
+            <div class="header-box" onclick="copyText()">
+                CONTACT US
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="header-box" id="feedback-header">
+                GIVE US FEEDBACK
+            </div>
+        </div>
+    </div>
+    <h1 class="title">Write in the box below on how we could improve our music and let us know your favorites from the catalog!</h1>
+    <form id="feedbackForm">
+        <input type="text" id="name" placeholder="Name Here" required>
+        <textarea id="message" placeholder="Enter your feedback here" required></textarea>
+        <button type="submit">Send Feedback</button>
+    </form>
+
+    <div id="feedbackContainer"></div>
+
+    <div class="login-page" id="loginPage" style="display: none;">
+        <div class="login-form" id="registerForm">
+            <h2>Register Here</h2>
+            <form>
+                <input type="text" placeholder="Username" id="username">
+                <input type="text" placeholder="Email" id="email">
+                <input type="password" placeholder="Password" id="password">
+                <button type="button" id="submit" onclick="register()">Register</button>
+                <button type="button" onclick="toggleForm()">Already have an account? Login here</button>
+            </form>
+        </div>
+
+        <div class="login-form" id="loginForm" style="display: none;">
+            <h2>Login Here</h2>
+            <form>
+                <input type="text" placeholder="Username" id="loginUsername">
+                <input type="password" placeholder="Password" id="loginPassword">
+                <button type="button" onclick="login()">Login</button>
+                <button type="button" onclick="toggleForm()">Don't have an account? Register here</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Feedback display section -->
+    <div id="feedbackSection">
+        <h2>Recent Feedbacks</h2>
+        <div id="feedbackList"></div>
+    </div>
+    
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getDatabase, ref, set, onChildAdded } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+    
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyCmGMnA7Z_pF-7Fdm1usartiWzWaEACMQQ",
+            authDomain: "syncsonic-login.firebaseapp.com",
+            projectId: "syncsonic-login",
+            storageBucket: "syncsonic-login.appspot.com",
+            messagingSenderId: "661735880236",
+            appId: "1:661735880236:web:45fb5919b728dec9a7c389",
+            measurementId: "G-EQWP4BFP18"
+        };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        // Listen for new feedbacks and display them
+        const feedbackList = document.getElementById("feedbackList");
+
+        onChildAdded(ref(db, "feedbacks"), (snapshot) => {
+            const feedback = snapshot.val();
+            const feedbackEntry = document.createElement('div');
+            feedbackEntry.classList.add('feedback-entry');
+            feedbackEntry.innerHTML = `<strong>Name:</strong> ${feedback.name}<br><strong>Feedback:</strong> ${feedback.feedback}`;
+            feedbackList.appendChild(feedbackEntry);
+
+            // Show feedback section when feedback is added
+            document.getElementById("feedbackSection").style.display = "block";
+        });
+
+        document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const message = document.getElementById("message").value;
+
+            if (name === "" || message === "") {
+                alert("Please enter your name and feedback.");
+                return;
+            }
+
+            // Save feedback to database
+            saveFeedback(name, message);
+        });
+
+        function saveFeedback(name, message) {
+            set(ref(db, "feedbacks/" + name), {
+                name: name,
+                feedback: message
+            }).then(() => {
+                alert("Feedback submitted successfully!");
+                document.getElementById("name").value = "";
+                document.getElementById("message").value = "";
+            }).catch((error) => {
+                console.error("Error saving feedback:", error);
+                alert("An error occurred while submitting feedback. Please try again later.");
+            });
+        }
+    </script>
+
+    <script src="scripts/feedback.js"></script>
+    <script src="scripts/all.js"></script>
+</body>
+</html>
