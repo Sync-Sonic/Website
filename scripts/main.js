@@ -5,15 +5,6 @@ videos.forEach(function(video) {
     });
 });
 
-function copyText() {
-    var textToCopy = "syncsonics@gmail.com";
-    navigator.clipboard.writeText(textToCopy).then(function() {
-        alert("Copied the mail: " + textToCopy);
-    }, function() {
-        return;
-    });
-}
-
 var beats = []; 
 
 function toggleBeat(beatNumber) {
