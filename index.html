@@ -2,7 +2,6 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/all.css">
     <title>Sync Sonic</title>
@@ -13,7 +12,7 @@
             <div class="header-box" id="home-header">
                 HOME
             </div>
-            <div class="header-box">
+            <div class="header-box" id="videos-header">
                 VIDEOS
             </div>
             <div class="header-box" onclick="copyText()">
@@ -130,20 +129,20 @@
 
     <div class="footer">
         <div class="video-container">
-            <video id="video1" controls>
+            <video id="video1" controls onclick="playVideo('video1')">
                 <source src="video/amazon.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
             
         <div class="video-container">
-            <video id="video2" controls>
+            <video id="video2" controls onclick="playVideo('video2')">
                 <source src="video/Peleton.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
         <div class="video-container">
-            <video id="video3" controls>
+            <video id="video3" controls onclick="playVideo('video3')">
                 <source src="video/amazon.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -151,21 +150,21 @@
     </div>
     <div class="container">
         <div class="video-container">
-            <video id="video4" controls>
+            <video id="video4" controls onclick="playVideo('video4')">
                 <source src="video/amazon.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
 
         <div class="video-container">
-            <video id="video5" controls>
+            <video id="video5" controls onclick="playVideo('video5')">
                 <source src="video/amazon.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
         
         <div class="video-container">
-            <video id="video6" controls>
+            <video id="video6" controls onclick="playVideo('video6')">
                 <source src="video/amazon.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>

@@ -11,12 +11,45 @@ function openHomePage() {
     window.location.pathname = '/';
 }
 
+document.getElementById("videos-header").addEventListener("click", openVideosPage);
+
+function openVideosPage() {
+    window.location.pathname = '/videos';
+}
+
 
 function copyText() {
     var textToCopy = "syncsonics@gmail.com";
+    
     navigator.clipboard.writeText(textToCopy).then(function() {
-        alert("Copied the mail: " + textToCopy);
+        var overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+
+        var messageContainer = document.createElement('div');
+        messageContainer.classList.add('message-container');
+        
+        var message = document.createElement('div');
+        message.textContent = "Copied: " + textToCopy;
+        
+        var doneButton = document.createElement('button');
+        doneButton.textContent = 'Done';
+        doneButton.addEventListener('click', function() {
+            document.body.removeChild(overlay);
+        });
+
+        messageContainer.appendChild(message);
+        messageContainer.appendChild(doneButton);
+        overlay.appendChild(messageContainer);
+        document.body.appendChild(overlay);
+
+        setTimeout(function() {
+            document.body.removeChild(overlay);
+        }, 5000);
+
+        window.addEventListener('keydown', function() {
+            document.body.removeChild(overlay);
+        });
     }, function() {
-        return;
+        console.error("Unable to copy text.");
     });
 }

@@ -35,3 +35,13 @@ document.addEventListener("DOMContentLoaded", function() {
         volumeControl.appendChild(audio);
     });
 });
+
+
+function playVideo(videoId) {
+    var videos = document.querySelectorAll("video");
+    videos.forEach(function(video) {
+        if (video.id !== videoId) {
+            video.pause();
+        }
+    });
+}

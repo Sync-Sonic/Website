@@ -8,12 +8,13 @@ body {
 
 body::-webkit-scrollbar {
     display: none;
-  }
+}
 
 .title {
     font-family: 'Lato', sans-serif;
     text-align: center;
     margin-top: 20px;
+    color: white;
 }
 
 form {
@@ -59,67 +60,6 @@ textarea::placeholder {
     color: #aaa;
 }
 
-.feedback-entry {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-
-.login-page {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: black;
-    font-family: 'Lato', sans-serif;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Ensure it appears above everything else */
-}
-
-.login-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    max-width: 300px;
-    width: 100%;
-    text-align: center;
-}
-
-.login-form h2 {
-    margin-bottom: 20px;
-}
-
-.login-form input[type="text"],
-.login-form input[type="password"],
-.login-form button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.login-form button {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-.login-form button:hover {
-    background-color: #45a049;
-}
-
-
 #feedbackSection {
     display: none;
     position: fixed;
@@ -129,9 +69,20 @@ textarea::placeholder {
     border-radius: 10px;
     padding: 20px;
     max-height: 400px;
-    overflow-y: auto;
+    max-width: 300px; 
+    overflow-y: auto; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     animation: fadeIn 0.5s ease forwards;
+    cursor: pointer;
+}
+
+.feedback-entry {
+    margin-top: 10px; 
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    overflow-wrap: break-word; 
 }
 
 @keyframes fadeIn {
@@ -145,10 +96,84 @@ textarea::placeholder {
     }
 }
 
-.feedback-entry {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f9f9f9;
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    text-align: center;
+    color: white;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.close:hover {
+    color: #ccc;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #45a049;
+}
+
+#charCount {
+    position: absolute;
+    font-size: 12px;
+    margin-top: -52px;
+    color: gray;
+}
+
+#message {
+    resize: none;
+}
+
+
+#feedbackSection {
+    transition: height 0.2s ease;
+    height: auto;
+}
+
+#feedbackList {
+    display: none;
+}
+
+.open {
+    transform: rotate(180deg);
+}
+
+
+button[type="submit"] {
+    margin-right: 10px;
 }

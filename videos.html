@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/videos.css">
+    <link rel="stylesheet" href="styles/all.css">
+    <title>Our Videos</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <div class="header-box" id="home-header">
+                HOME
+            </div>
+            <div class="header-box" id="videos-header">
+                VIDEOS
+            </div>
+            <div class="header-box" onclick="copyText()">
+                CONTACT US
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="header-box" id="feedback-header">
+                GIVE US FEEDBACK
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <div class="footer">
+        <div class="video-container">
+            <video id="video1" controls onclick="playVideo('video1')">
+                <source src="video/amazon.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+            
+        <div class="video-container">
+            <video id="video2" controls onclick="playVideo('video2')">
+                <source src="video/Peleton.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-container">
+            <video id="video3" controls onclick="playVideo('video3')">
+                <source src="video/amazon.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div class="container">
+        <div class="video-container">
+            <video id="video4" controls onclick="playVideo('video4')">
+                <source src="video/amazon.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="video-container">
+            <video id="video5" controls onclick="playVideo('video5')">
+                <source src="video/amazon.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <div class="video-container">
+            <video id="video6" controls onclick="playVideo('video6')">
+                <source src="video/amazon.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script src="scripts/all.js"></script>
+    <script src="scripts/videos.js"></script>
+</body>
+</html>
