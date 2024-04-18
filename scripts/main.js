@@ -100,3 +100,14 @@ function hidePlayPauseOverlay(video) {
     var overlay = document.getElementById(overlayId);
     overlay.style.display = "none";
 }
+
+var overlays = document.querySelectorAll(".play-pause-overlay");
+
+overlays.forEach(function(overlay) {
+    overlay.addEventListener("click", function(event) {
+        event.preventDefault();
+        var videoId = overlay.id.replace("play", "video");
+        var video = document.getElementById(videoId);
+        togglePlay(video);
+    });
+});

@@ -53,3 +53,7 @@ function copyText() {
         console.error("Unable to copy text.");
     });
 }
+
+function openYouTube(url) {
+    window.open(url, '_blank');
+}

@@ -79,3 +79,19 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+.video-link {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.video-link:hover {
+    color: aqua;
+}
+
