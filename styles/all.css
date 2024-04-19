@@ -2,6 +2,15 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+/* 
+Background Ideas:
+https://wallpaper.dog/large/969401.jpg
+https://wallpapers.com/images/hd/chill-4k-lighthouse-art-kp2abbznw07w1e3c.jpg
+
+Current:
+https://wallpapercave.com/wp/wp5515179.jpg
+*/
+
 body, .volume-controls, .container, .footer, .check-out-our-work, .contact-us-here, .contact-us {
     background-image: url('https://wallpapercave.com/wp/wp5515179.jpg');
     background-size: cover;

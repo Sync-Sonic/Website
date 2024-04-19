@@ -113,7 +113,7 @@ body::-webkit-scrollbar {
 /* Font */
 
 .title, .subtitle, .about-box, .meet-team, .name, .work, .check-out-our-work, .contact-us-here, .contact-us {
-    font-family: 'Brush Script MT', Cursive;
+    font-weight: bold;
 }
 
 .title {
