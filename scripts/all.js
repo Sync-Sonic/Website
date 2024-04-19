@@ -16,29 +16,47 @@ document.getElementById("videos-header").addEventListener("click", openVideosPag
 function openVideosPage() {
     window.location.pathname = '/videos';
 }
-
-
 function copyText() {
     var textToCopy = "syncsonics@gmail.com";
-    
+
     navigator.clipboard.writeText(textToCopy).then(function() {
         var overlay = document.createElement('div');
         overlay.classList.add('overlay');
 
         var messageContainer = document.createElement('div');
         messageContainer.classList.add('message-container');
-        
-        var message = document.createElement('div');
-        message.textContent = "Copied: " + textToCopy;
-        
-        var doneButton = document.createElement('button');
-        doneButton.textContent = 'Done';
-        doneButton.addEventListener('click', function() {
+
+        var checkmarkIcon = document.createElement('i');
+        checkmarkIcon.classList.add('fa-solid', 'fa-check', 'checkmark-icon');
+
+        var successMessage = document.createElement('div');
+        successMessage.textContent = "Success!";
+        successMessage.classList.add('success-message');
+
+        var emailText = document.createElement('div');
+        emailText.textContent = textToCopy;
+        emailText.classList.add('email-text');
+
+        var copiedText = document.createElement('div');
+        copiedText.textContent = "Copied to clipboard";
+        copiedText.classList.add('copied-text');
+
+        var closeButton = document.createElement('button');
+        closeButton.textContent = 'Close';
+        closeButton.addEventListener('click', function() {
             document.body.removeChild(overlay);
         });
 
-        messageContainer.appendChild(message);
-        messageContainer.appendChild(doneButton);
+        messageContainer.appendChild(checkmarkIcon);
+        messageContainer.appendChild(document.createElement('br')); 
+        messageContainer.appendChild(document.createElement('br')); 
+        messageContainer.appendChild(successMessage);
+        messageContainer.appendChild(document.createElement('br')); 
+        messageContainer.appendChild(emailText);
+        messageContainer.appendChild(document.createElement('br')); 
+        messageContainer.appendChild(copiedText);
+        messageContainer.appendChild(document.createElement('br')); 
+        messageContainer.appendChild(closeButton);
         overlay.appendChild(messageContainer);
         document.body.appendChild(overlay);
 

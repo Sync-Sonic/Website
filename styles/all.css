@@ -11,7 +11,7 @@ Current:
 https://wallpapercave.com/wp/wp5515179.jpg
 */
 
-body, .volume-controls, .container, .footer, .check-out-our-work, .contact-us-here, .contact-us {
+body, .volume-controls, .container, .footer, .check-out-our-work, .contact-us-here, .contact-us, .copyright, html {
     background-image: url('https://wallpapercave.com/wp/wp5515179.jpg');
     background-size: cover;
     background-position: center;
@@ -20,6 +20,20 @@ body, .volume-controls, .container, .footer, .check-out-our-work, .contact-us-he
     padding: 0; 
 }
 
+
+.copyright {
+    bottom: 20px; 
+    width: 100%; 
+    text-align: center; 
+    margin-top: 100px; 
+    font-size: 14px; 
+    color: white;
+}
+
+.after-copyright {
+    margin-top: 90px; 
+    color: rgba(0, 0, 0, 0.0)
+}
 
 .header {
     display: flex;
@@ -51,6 +65,7 @@ body, .volume-controls, .container, .footer, .check-out-our-work, .contact-us-he
 }
 
 .overlay {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -103,4 +118,3 @@ button:hover {
 .video-link:hover {
     color: aqua;
 }
-
