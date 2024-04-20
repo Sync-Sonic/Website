@@ -20,27 +20,12 @@ https://wallpapercave.com/wp/wp5515179.jpg
 */
 
 body, .volume-controls, .box-container {
-    background-image: url("https://maxmoore.uk/assets/img/bg-masthead.jpg");
+    background-image: url("https://cdn.discordapp.com/attachments/979714680715096114/1231333746557587456/image.png?ex=6625706a&is=66241eea&hm=1338d6068be83ff955ecc62fcf479bd585e3fe80114aa118c7050e5267848285&");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
-}
-
-
-.copyright {
-    bottom: 20px; 
-    width: 100%; 
-    text-align: center; 
-    margin-top: 100px; 
-    font-size: 14px; 
-    color: white;
-}
-
-.after-copyright {
-    margin-top: 90px; 
-    color: rgba(0, 0, 0, 0.0)
 }
 
 .header {
