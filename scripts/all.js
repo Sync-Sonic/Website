@@ -16,12 +16,22 @@ document.getElementById("videos-header").addEventListener("click", openVideosPag
 function openVideosPage() {
     window.location.pathname = '/videos';
 }
+
+function scrollToBottom() {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    });
+}
+
+
+
 function copyText() {
     var textToCopy = "syncsonics@gmail.com";
 
     navigator.clipboard.writeText(textToCopy).then(function() {
         var overlay = document.createElement('div');
-        overlay.classList.add('overlay');
+        overlay.classList.add('copy-overlay');
 
         var messageContainer = document.createElement('div');
         messageContainer.classList.add('message-container');
@@ -63,7 +73,7 @@ function copyText() {
         setTimeout(function() {
             document.body.removeChild(overlay);
         }, 5000);
-
+    
         window.addEventListener('keydown', function() {
             document.body.removeChild(overlay);
         });
