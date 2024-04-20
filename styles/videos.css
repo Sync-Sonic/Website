@@ -16,7 +16,7 @@
     position: relative;
     width: 31%;
     height: 300px;
-    border: 5px solid black;
+    border: 5px solid rgba(255, 255, 255, 0.493);
     border-radius: 18px;
     overflow: hidden;
     margin: 400px 10px 10px 10px; /* Adjusted margin to move the video containers higher up */
@@ -29,10 +29,13 @@
     object-fit: cover; 
 }
 
+
+/*
 .video-container video::-webkit-media-controls-start-playback-button,
 .video-container video::-webkit-media-controls-enclosure {
     display: none !important;
 }
+*/
 
 body {
     color: white;

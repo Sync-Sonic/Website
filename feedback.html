@@ -16,17 +16,21 @@
             <div class="header-box" id="videos-header">
                 VIDEOS
             </div>
-            <div class="header-box" onclick="copyText()">
-                CONTACT US
-            </div>
+            <div class="header-box" id="music-header">
+                MUSIC
+            </div>          
         </div>
         <div class="header-right">
+            <div class="header-box" onclick="scrollToBottom()">
+                CONTACT US
+            </div>
             <div class="header-box" id="feedback-header">
                 GIVE US FEEDBACK
             </div>
         </div>
     </div>
-    <h1 class="title">Write in the box below on how we could improve our music!</h1>
+    
+    <h1 class="title">How could we improve our sync music?</h1>
     <form id="feedbackForm">
         <input type="text" id="name" placeholder="Name Here" required>
         <textarea id="message" placeholder="Enter your feedback here (max 200 characters)" maxlength="200" required></textarea>

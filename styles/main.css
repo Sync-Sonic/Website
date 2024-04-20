@@ -91,7 +91,7 @@ body::-webkit-scrollbar {
     position: relative;
     width: 31%;
     height: 300px;
-    border: 5px solid rgba(255, 255, 255, 0.418);
+    border: 5px solid rgba(255, 255, 255, 0.493);
     border-radius: 18px;
     overflow: hidden;
     margin: 300px 10px 10px 10px; /* Adjusted margin to move the video containers higher up */
@@ -103,6 +103,13 @@ body::-webkit-scrollbar {
     height: 100%;
     object-fit: cover; 
 }
+
+/*
+.video-container video::-webkit-media-controls-start-playback-button,
+.video-container video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+*/
 
 /* Font */
 
