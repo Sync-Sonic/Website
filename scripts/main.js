@@ -23,9 +23,11 @@ videos.forEach(function(video) {
         var overlay = document.getElementById(overlayId);
         overlay.src = "images/pause.png";
         clearTimeout(timeout);
-        timeout = setTimeout(function() {
-            hidePlayPauseOverlay(video);
-        }, 2000);
+        if (!video.paused) {
+            timeout = setTimeout(function() {
+                hidePlayPauseOverlay(video);
+            }, 2000);
+        }
     });
 
     video.addEventListener("pause", function() {
@@ -44,9 +46,11 @@ videos.forEach(function(video) {
     video.addEventListener("mousemove", function() {
         clearTimeout(timeout);
         showPlayPauseOverlay(video);
-        timeout = setTimeout(function() {
-            hidePlayPauseOverlay(video);
-        }, 2000);
+        if (!video.paused) {
+            timeout = setTimeout(function() {
+                hidePlayPauseOverlay(video);
+            }, 2000);
+        }
     });
 });
 

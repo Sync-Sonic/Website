@@ -48,7 +48,7 @@ body::-webkit-scrollbar {
 .details {
     font-size: 28px;
     position: absolute;
-    bottom: -190px;
+    bottom: -160px;
     left: 0;
     width: 110%;
     margin-left: -10px;

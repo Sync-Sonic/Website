@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-    
+
     <h1 class="title">How could we improve our sync music?</h1>
     <form id="feedbackForm">
         <input type="text" id="name" placeholder="Name Here" required>
@@ -108,6 +108,9 @@
             }).then(() => {
                 document.getElementById("popupContent").innerHTML = `<strong>Name:</strong> ${name}<br><strong>Feedback:</strong> ${message}`;
                 document.getElementById("feedbackPopup").style.display = "block";
+                
+                var audio = new Audio('audio/pling.mp3');
+                audio.play();
                 
                 setTimeout(closePopup, 3000);
             }).catch((error) => {
