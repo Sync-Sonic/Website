@@ -36,6 +36,10 @@ function copyText() {
     var textToCopy = "syncsonics@gmail.com";
 
     navigator.clipboard.writeText(textToCopy).then(function() {
+        
+        var audio = new Audio('audio/pling.mp3');
+        audio.play();
+
         var overlay = document.createElement('div');
         overlay.classList.add('copy-overlay');
 

@@ -91,7 +91,7 @@ body::-webkit-scrollbar {
     position: relative;
     width: 31%;
     height: 300px;
-    border: 5px solid white;
+    border: 5px solid rgba(255, 255, 255, 0.418);
     border-radius: 18px;
     overflow: hidden;
     margin: 300px 10px 10px 10px; /* Adjusted margin to move the video containers higher up */
@@ -102,11 +102,6 @@ body::-webkit-scrollbar {
     width: 101%;
     height: 100%;
     object-fit: cover; 
-}
-
-.video-container video::-webkit-media-controls-start-playback-button,
-.video-container video::-webkit-media-controls-enclosure {
-    display: none !important;
 }
 
 /* Font */
@@ -206,7 +201,6 @@ body::-webkit-scrollbar {
 }
 
 .fa-instagram:hover {
-    font-size: 53px;
     color: white;
 }
 
@@ -287,10 +281,10 @@ body::-webkit-scrollbar {
     font-size: 35px;
     font-weight: bold;
     text-align: center;
-    margin-top: -55px;
+    margin-top: -25px;
     font-size: 3rem;
     line-height: 2.5rem;
-    letter-spacing: 0.6r em;
+    letter-spacing: 0.6rem;
 }
 
 .bg-black {
