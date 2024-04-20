@@ -19,13 +19,13 @@ Current:
 https://wallpapercave.com/wp/wp5515179.jpg
 */
 
-body, .volume-controls, .container, .footer, .check-out-our-work, .contact-us-here, .contact-us, .copyright, html {
-    background-image: url("https://cdn.discordapp.com/attachments/979714680715096114/1231259910377967619/11624195249337betn2bzer5veig98yngvwvb8r0sodhfmebcfxv4k213evxh7nhuiau0ew96p7qylifuxnde0qmh5zddjfzn0m4zcqpoamyohy.png?ex=66364f26&is=6623da26&hm=d316f05115dfd8ddac7b3e8da8960fc2318337fb233f2e9abce4252461cdfcd2&");
+body, .volume-controls, .box-container {
+    background-image: url("https://maxmoore.uk/assets/img/bg-masthead.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
 
 
@@ -51,7 +51,7 @@ body, .volume-controls, .container, .footer, .check-out-our-work, .contact-us-he
 }
 
 .header-box:hover {
-    box-shadow: 0 0 35px aqua;
+    box-shadow: 0 0 35px white;
     cursor: pointer;
 }
 

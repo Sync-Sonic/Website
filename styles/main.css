@@ -2,7 +2,6 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    color: white;
     font-weight: bold;
     background-color: white;
     /* Remove scrollbar */
@@ -18,7 +17,7 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 
-.container {
+.box-container, .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; 
@@ -28,10 +27,10 @@ body::-webkit-scrollbar {
 
 .box {
     position: relative;
-    width: 120px;
-    height: 120px;
+    width: 290px;
+    height: 290px;
     border-radius: 10px;
-    background-color: black;
+    background-color: #0000005d;
     margin: 50px;
 }
 
@@ -47,18 +46,19 @@ body::-webkit-scrollbar {
 }
 
 .details {
+    font-size: 28px;
     position: absolute;
-    bottom: -100px;
+    bottom: -190px;
     left: 0;
-    width: 120%;
+    width: 110%;
     margin-left: -10px;
     text-align: center;
 }
 
 
 .box img {
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 110%;
+    max-height: 110%;
     border-radius: 40%;
 }
 
@@ -91,7 +91,7 @@ body::-webkit-scrollbar {
     position: relative;
     width: 31%;
     height: 300px;
-    border: 5px solid black;
+    border: 5px solid white;
     border-radius: 18px;
     overflow: hidden;
     margin: 300px 10px 10px 10px; /* Adjusted margin to move the video containers higher up */
@@ -118,11 +118,11 @@ body::-webkit-scrollbar {
 .title {
     text-align: center;
     color: black;
-    margin-top: 20px;
-    font-size: 4rem;
-    line-height: 3.5rem;
+    margin-top: 120px;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
     letter-spacing: 0.8rem;
-    background: linear-gradient(rgba(97, 96, 96, 0.9), rgba(0, 0, 0, 0.7));
+    background: linear-gradient(rgba(24, 23, 23, 0.9), rgba(0, 0, 0, 0.7));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -133,8 +133,8 @@ body::-webkit-scrollbar {
     color: black;
     font-size: 18px;
     margin-top: 10px;
-    font-size: 1.6rem;
-    line-height: 3rem;
+    font-size: 2.0rem;
+    line-height: 4.5rem;
     letter-spacing: 0.2rem;
     background: linear-gradient(rgba(97, 96, 96, 0.9), rgba(0, 0, 0, 0.7));
     -webkit-text-fill-color: transparent;
@@ -149,21 +149,22 @@ body::-webkit-scrollbar {
 }
 
 .about-box {
-    background-color: white;
+    background: #ffffff5d;
     color: black;
     border-radius: 8px;
+    font-size: 22px;
     padding: 20px;
     width: 80%;
-    max-width: 600px;
+    max-width: 1000px;
     text-align: center;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.8);
 }
 
 .meet-team {
     text-align: center;
-    margin-top: 30px;
-    font-size: 3rem;
-    line-height: 2.5rem;
+    margin-top: 90px;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
     letter-spacing: 0.7rem;
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
     -webkit-text-fill-color: transparent;
@@ -172,24 +173,41 @@ body::-webkit-scrollbar {
     border-color: black;
 }
 
-.name{
+.name {
     color: white;
     font-weight: bold;
-    font-size: 15px;
     text-align: center;
+    margin: 20px auto;
+}
+
+.lines {
+    width: 200px;
+    height: 1px;
+    background-color: #00000093;
+    margin: -10px auto;
 }
 
 .work {
     color: white;
     font-weight: bold;
-    font-size: 15px;
     text-align: center;
-    margin-top: -50px;
+    margin: 20px auto;
 }
 
+
 .instagram {
-    width: 30px;
+    width: 40px;
     margin: 10px;
+}
+
+.fa-instagram {
+    font-size: 50px;
+    color: black;
+}
+
+.fa-instagram:hover {
+    font-size: 53px;
+    color: white;
 }
 
 .contact-us-box {
@@ -250,21 +268,6 @@ body::-webkit-scrollbar {
 
 */
 
-.check-out-our-beats {
-    font-size: 35px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: -400px;
-    font-size: 3rem;
-    line-height: 2.5rem;
-    letter-spacing: 0.6rem;
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    border-color: black;
-}
-
 .check-out-our-work {
     font-size: 35px;
     font-weight: bold;
@@ -273,45 +276,18 @@ body::-webkit-scrollbar {
     font-size: 3rem;
     line-height: 2.5rem;
     letter-spacing: 0.6rem;
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    border-color: black;
 }
 
-.volume-controls {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    margin-top: 20px;
+.bg-black {
+    box-shadow: 0 0 50000px 400px rgb(0, 0, 0);
 }
 
-.volume-control {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-}
-
-.volume-control img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 5px;
-}
-
-.volume-control p {
+html, .bg-black {
+    color: white;
+    background-image: url("https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcSnPxWs5UFx7V9AGOpd0qBdWPRG3YAwV7k9vpAzo4xPzXEYaT9PMdDfRvNidEi6gQQrhkjFqYH25O-srtsbmlg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     margin: 0;
-    font-size: 16px;
-}
-
-.volume-container {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 450px;
-}
-.volume-container2 {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 450px;
+    padding: 0; 
 }

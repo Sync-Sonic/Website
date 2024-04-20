@@ -17,6 +17,12 @@ function openVideosPage() {
     window.location.pathname = '/videos';
 }
 
+document.getElementById("music-header").addEventListener("click", openMusicPage);
+
+function openMusicPage() {
+    window.location.pathname = '/music';
+}
+
 function scrollToBottom() {
     window.scrollTo({
         top: document.body.scrollHeight,

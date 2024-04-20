@@ -16,11 +16,14 @@
             <div class="header-box" id="videos-header">
                 VIDEOS
             </div>
-            <div class="header-box" onclick="scrollToBottom()">
-                CONTACT US
-            </div>            
+            <div class="header-box" id="music-header">
+                MUSIC
+            </div>          
         </div>
         <div class="header-right">
+            <div class="header-box" onclick="scrollToBottom()">
+                CONTACT US
+            </div>
             <div class="header-box" id="feedback-header">
                 GIVE US FEEDBACK
             </div>
@@ -33,8 +36,9 @@
             <p>SyncSonic is an innovative group of four experienced UK-based songwriters, instrumentalists and producers, each bringing our individual skills to all projects we venture into. Our mission is to create top-tier bespoke compositions tailored to the diverse needs of our  clientele across a range of genres, and platforms. We specialise in commissions for original music in television, film, advertisements and other visual media, which we do with a fresh and unique approach. At SyncSonic, we pride ourselves on our ability to maintain absolute trust with our clients, elevate their narratives, and leave a positive mark on brand identities.</p>
         </div>
     </div>
-    <p class="meet-team">Meet the team:</p>
-    <div class="container">
+
+    <p class="meet-team">MEET THE TEAM:</p>
+    <div class="box-container">
         <div class="box">
             <a href="https://www.instagram.com/alfie.wavv/" target="_blank">
                 <div class="image-container">
@@ -42,8 +46,9 @@
                 </div>
                 <div class="details">
                     <p class="name">Alfie Williams</p>
-                    <p class="work">[Producer]</p>
-                    <img class="instagram" src="images/instagram.png" alt="Instagram">
+                    <div class="lines"></div>
+                    <p class="work">Producer / Songwriter</p>
+                    <i class="fa-brands fa-instagram"></i>
                 </div>
             </a>
         </div>
@@ -54,8 +59,9 @@
                 </div>
                 <div class="details">
                     <p class="name">Sebastian Waldron</p>
-                    <p class="work">[Composer]</p>
-                    <img class="instagram fa-brands fa-instagram" src="images/instagram.png" alt="Instagram">
+                    <div class="lines"></div>
+                    <p class="work">Producer / Songwriter</p>
+                    <i class="fa-brands fa-instagram"></i>
                 </div>
             </a>
         </div>
@@ -66,8 +72,9 @@
                 </div>
                 <div class="details">
                     <p class="name">Sirine Jahangir</p>
-                    <p class="work">[Top Line]</p>
-                    <img class="instagram" src="images/instagram.png" alt="Instagram">
+                    <div class="lines"></div>
+                    <p class="work">Vocalist / Songwriter</p>
+                    <i class="fa-brands fa-instagram"></i>
                 </div>
             </a>
         </div>
@@ -78,120 +85,80 @@
                 </div>
                 <div class="details">
                     <p class="name">Ethan Davis</p>
-                    <p class="work">[Instrumentalist]</p>
-                    <img class="instagram" src="images/instagram.png" alt="Instagram">
+                    <div class="lines"></div>
+                    <p class="work">Musician / Songwriter</p>
+                    <i class="fa-brands fa-instagram"></i>
                 </div>
             </a>
         </div>    
     </div>       
 
-    <h1 class="check-out-our-beats">Check out our beats:</h1>
+    <div class="bg-black">
+        <h1 class="check-out-our-work">Check out our work:</h1>
 
-    <div class="volume-controls">
-        <div class="volume-container">
-            <div class="volume-control" onclick="toggleBeat(1)">
-                <img src="images/volume.png" alt="Volume">
-                <p>Beat #1</p>
+        <div class="footer">
+            <div class="video-container">
+                <video id="video1" controls onclick="playVideo('video1')">
+                    <source src="video/amazon.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <img src="images/play.png" class="play-pause-overlay" id="play1" onclick="togglePlay('video1')">
+                <p class="video-link" onclick="openYouTube('https://www.youtube.com/watch?v=VIDEO_ID_1')">Watch on YouTube</p>
             </div>
-            <div class="volume-control" onclick="toggleBeat(2)">
-                <img src="images/volume.png" alt="Volume">
-                <p>Beat #2</p>
+                
+            <div class="video-container">
+                <video id="video2" controls onclick="playVideo('video2')">
+                    <source src="video/Peleton.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <img src="images/play.png" class="play-pause-overlay" id="play2" onclick="togglePlay('video2')">
+                <p class="video-link" onclick="openYouTube('https://www.youtube.com/watch?v=VIDEO_ID_2')">Watch on YouTube</p>
             </div>
-            <div class="volume-control" onclick="toggleBeat(3)">
-                <img src="images/volume.png" alt="Volume">
-                <p>Beat #3</p>
-            </div>
-            <div class="volume-control" onclick="toggleBeat(4)">
-                <img src="images/volume.png" alt="Volume">
-                <p>Beat #4</p>
+            <div class="video-container">
+                <video id="video3" controls onclick="playVideo('video3')">
+                    <source src="video/amazon.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <img src="images/play.png" class="play-pause-overlay" id="play3" onclick="togglePlay('video3')"> 
+                <p class="video-link" onclick="openYouTube('https://www.youtube.com/watch?v=VIDEO_ID_3')">Watch on YouTube</p>
             </div>
         </div>
-        <div class="volume-container2">
-            <div class="volume-control" onclick="toggleBeat(5)">
-                <img src="images/volume.png" alt="Volume">
-                <p>Beat #5</p>
+        <div class="container">
+            <div class="video-container">
+                <video id="video4" controls onclick="playVideo('video4')">
+                    <source src="video/amazon.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <img src="images/play.png" class="play-pause-overlay" id="play4" onclick="togglePlay('video4')">
+                <p class="video-link" onclick="openYouTube('https://www.youtube.com/watch?v=VIDEO_ID_1')">Watch on YouTube</p>
             </div>
-            <div class="volume-control" onclick="toggleBeat(6)">
-                <img src="images/volume.png" alt="Volume">
-                <p>Beat #6</p>
-            </div>
-            <div class="volume-control" onclick="toggleBeat(7)">
-                <img src="images/volume.png" alt="Volume">
-                <p>Beat #7</p>
-            </div>
-            <div class="volume-control" onclick="toggleBeat(8)">
-                <img src="images/volume.png" alt="Volume">
-                <p>Beat #8</p>
-            </div>
-        </div>
-    </div>
 
-    <h1 class="check-out-our-work">Check out our work:</h1>
-
-
-    <div class="footer">
-        <div class="video-container">
-            <video id="video1" controls onclick="playVideo('video1')">
-                <source src="video/amazon.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <img src="images/play.png" class="play-pause-overlay" id="play1" onclick="togglePlay('video1')">
-            <p class="video-link" onclick="openYouTube('https://www.youtube.com/watch?v=VIDEO_ID_1')">Watch on YouTube</p>
-        </div>
+            <div class="video-container">
+                <video id="video5" controls onclick="playVideo('video5')">
+                    <source src="video/amazon.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <img src="images/play.png" class="play-pause-overlay" id="play5" onclick="togglePlay('video5')">
+                <p class="video-link" onclick="openYouTube('https://www.youtube.com/watch?v=VIDEO_ID_1')">Watch on YouTube</p>
+            </div>
             
-        <div class="video-container">
-            <video id="video2" controls onclick="playVideo('video2')">
-                <source src="video/Peleton.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <img src="images/play.png" class="play-pause-overlay" id="play2" onclick="togglePlay('video2')">
-            <p class="video-link" onclick="openYouTube('https://www.youtube.com/watch?v=VIDEO_ID_2')">Watch on YouTube</p>
-        </div>
-        <div class="video-container">
-            <video id="video3" controls onclick="playVideo('video3')">
-                <source src="video/amazon.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <img src="images/play.png" class="play-pause-overlay" id="play3" onclick="togglePlay('video3')"> 
-            <p class="video-link" onclick="openYouTube('https://www.youtube.com/watch?v=VIDEO_ID_3')">Watch on YouTube</p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="video-container">
-            <video id="video4" controls onclick="playVideo('video4')">
-                <source src="video/amazon.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <img src="images/play.png" class="play-pause-overlay" id="play4" onclick="togglePlay('video4')">
-            <p class="video-link" onclick="openYouTube('https://www.youtube.com/watch?v=VIDEO_ID_1')">Watch on YouTube</p>
+            <div class="video-container">
+                <video id="video6" controls onclick="playVideo('video6')">
+                    <source src="video/amazon.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <img src="images/play.png" class="play-pause-overlay" id="play6" onclick="togglePlay('video6')">
+                <p class="video-link" onclick="openYouTube('https://www.youtube.com/watch?v=VIDEO_ID_1')">Watch on YouTube</p>
+            </div>
         </div>
 
-        <div class="video-container">
-            <video id="video5" controls onclick="playVideo('video5')">
-                <source src="video/amazon.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <img src="images/play.png" class="play-pause-overlay" id="play5" onclick="togglePlay('video5')">
-            <p class="video-link" onclick="openYouTube('https://www.youtube.com/watch?v=VIDEO_ID_1')">Watch on YouTube</p>
-        </div>
-        
-        <div class="video-container">
-            <video id="video6" controls onclick="playVideo('video6')">
-                <source src="video/amazon.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <img src="images/play.png" class="play-pause-overlay" id="play6" onclick="togglePlay('video6')">
-            <p class="video-link" onclick="openYouTube('https://www.youtube.com/watch?v=VIDEO_ID_1')">Watch on YouTube</p>
+        <div class="contact-us-box">
+            <i class="fa-solid fa-envelope envelope-icon"></i>
+            <p class="contact-label">EMAIL</p>
+            <div class="line"></div>
+            <p class="email-address" onclick="copyText()">syncsonics@gmail.com</p>
         </div>
     </div>
-
-    <div class="contact-us-box">
-        <i class="fa-solid fa-envelope envelope-icon"></i>
-        <p class="contact-label">EMAIL</p>
-        <div class="line"></div>
-        <p class="email-address" onclick="copyText()">syncsonics@gmail.com</p>
-    </div>
-    
 
     <p class="copyright">Copyright © Sync Sonic Limited 2024</p>
     <p class="after-copyright">.</p>
