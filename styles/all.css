@@ -19,7 +19,7 @@ Current:
 https://wallpapercave.com/wp/wp5515179.jpg
 */
 
-body, .volume-controls, .box-container {
+body, .volume-controls, .box-container, html {
     background-image: url("https://cdn.discordapp.com/attachments/979714680715096114/1231333746557587456/image.png?ex=6625706a&is=66241eea&hm=1338d6068be83ff955ecc62fcf479bd585e3fe80114aa118c7050e5267848285&");
     background-size: cover;
     background-position: center;
@@ -29,6 +29,7 @@ body, .volume-controls, .box-container {
 }
 
 .header {
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     display: flex;
     justify-content: space-between;
     align-items: center;
