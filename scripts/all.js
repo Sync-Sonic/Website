@@ -1,23 +1,14 @@
-
-document.getElementById("feedback-header").addEventListener("click", openFeedbackPage);
-
 function openFeedbackPage() {
     window.location.href = '/feedback';
 }
-
-document.getElementById("home-header").addEventListener("click", openHomePage);
 
 function openHomePage() {
     window.location.pathname = '/';
 }
 
-document.getElementById("videos-header").addEventListener("click", openVideosPage);
-
 function openVideosPage() {
     window.location.pathname = '/videos';
 }
-
-document.getElementById("music-header").addEventListener("click", openMusicPage);
 
 function openMusicPage() {
     window.location.pathname = '/music';
