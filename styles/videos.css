@@ -68,3 +68,17 @@ body::-webkit-scrollbar {
     align-items: center;
     height: 100px;
 }
+
+.copyright {
+    bottom: 20px; 
+    width: 100%; 
+    text-align: center; 
+    margin-top: 150px; 
+    font-size: 14px; 
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.after-copyright {
+    margin-top: 150px; 
+    color: rgba(0, 0, 0, 0.0)
+}
