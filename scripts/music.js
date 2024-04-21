@@ -8,6 +8,11 @@ function toggleBeat(beatNumber) {
     var audio = beat.querySelector('audio');
     var img = beat.querySelector('img');
     
+    if (!audio) {
+        console.error('Audio element not found for beat ' + beatNumber);
+        return;
+    }
+
     if (currentAudio && currentAudio !== audio) {
         currentAudio.pause();
         currentImg.src = "images/volume.png";
@@ -27,15 +32,21 @@ function toggleBeat(beatNumber) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    var volumeControls = document.querySelectorAll(".volume-control");
-    
-    volumeControls.forEach(function(volumeControl, index) {
-        var beatNumber = index + 1;
-        var audio = document.createElement('audio');
-        audio.src = 'audio/beat ' + beatNumber + '.mp3';
-        audio.loop = true;
-        beats.push(volumeControl);
-        
-        volumeControl.appendChild(audio);
+    var categoryContainers = document.querySelectorAll(".category");
+
+    categoryContainers.forEach(function(category) {
+        var categoryBeats = category.querySelectorAll(".beat");
+        beats.push(categoryBeats);
+    });
+
+    beats = beats.flat(); // Flatten the array
+
+    beats.forEach(function(beat, index) {
+        beat.addEventListener("click", function() {
+            var categoryIndex = Math.floor(index / 4); // Since there are 4 beats per category
+            var beatIndex = index % 4; // Index of the beat within the category
+            var beatNumber = categoryIndex * 4 + beatIndex + 1; // Calculate the beat number
+            toggleBeat(beatNumber);
+        });
     });
 });

@@ -30,6 +30,7 @@ body, .volume-controls, .box-container, html {
 
 .header {
     font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;

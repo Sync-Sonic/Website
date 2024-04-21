@@ -1,45 +1,81 @@
-.volume-controls {
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.categories {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.category {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+}
+
+.category h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.beats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.beat {
+    color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: calc(50% - 10px);
+    display: flex;
     align-items: center;
-    margin-top: 200px;
+}
+
+.beat img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.beat p {
+    margin: 0;
+}
+
+.volume-controls {
+    margin-top: 20px;
 }
 
 .volume-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
 }
 
 .volume-control {
-    margin: 10px;
-    text-align: center;
+    margin-right: 10px;
 }
 
-.volume-control:hover {
-    cursor: pointer;
-}
-
-.volume-control p {
-    color: white;
-    margin-top: 5px;
+.volume-control:last-child {
+    margin-right: 0;
 }
 
 .volume-control img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.check-out-our-beats {
-    text-align: center;
-    color: white;
-    margin-top: 50px;
-    font-size: 2rem;
+    width: 30px;
+    height: 30px;
 }
 
 .copyright {

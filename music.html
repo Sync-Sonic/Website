@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="styles/music.css">
-        <link rel="stylesheet" href="styles/all.css">
-        <link rel="icon" href="data:,">
-        <title>Music</title>
-    </head>    
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/all.css">
+    <link rel="stylesheet" href="styles/music.css">
+    <link rel="icon" href="images/icon.png">
+    <link rel="icon" href="data:,">
+    <title>Music</title>
+</head>
 <body>
     <div class="header">
         <div class="header-left">
@@ -21,53 +22,92 @@
             </div>
         </div>
         <div class="header-right">
-            <div class="header-box" onclick="copyText()">
+            <div class="header-box" onclick="scrollToBottom()">
                 CONTACT US
             </div>
         </div>
     </div>
-    <div class="volume-controls">
-        <div class="volume-container">
-            <div class="volume-control" onclick="toggleBeat(1)">
+    
+    <div class="categories">
+        <div class="category love-song">
+            <h2>Love Songs</h2>
+            <div class="beat" onclick="toggleBeat(1)">
                 <img src="images/volume.png" alt="Volume">
                 <p>Beat #1</p>
             </div>
-            <div class="volume-control" onclick="toggleBeat(2)">
+            <div class="beat" onclick="toggleBeat(2)">
                 <img src="images/volume.png" alt="Volume">
                 <p>Beat #2</p>
             </div>
-            <div class="volume-control" onclick="toggleBeat(3)">
+            <div class="beat" onclick="toggleBeat(3)">
                 <img src="images/volume.png" alt="Volume">
                 <p>Beat #3</p>
             </div>
-        </div>
-        <div class="volume-container">
-            <div class="volume-control" onclick="toggleBeat(4)">
+            <div class="beat" onclick="toggleBeat(4)">
                 <img src="images/volume.png" alt="Volume">
                 <p>Beat #4</p>
             </div>
-            <div class="volume-control" onclick="toggleBeat(5)">
+        </div>
+        <div class="category hip-hop">
+            <h2>Hip-Hop Beats</h2>
+            <div class="beat" onclick="toggleBeat(5)">
                 <img src="images/volume.png" alt="Volume">
-                <p>Beat #5</p>
+                <p>Beat #1</p>
             </div>
-            <div class="volume-control" onclick="toggleBeat(6)">
+            <div class="beat" onclick="toggleBeat(6)">
                 <img src="images/volume.png" alt="Volume">
-                <p>Beat #6</p>
+                <p>Beat #2</p>
             </div>
-            <div class="volume-control" onclick="toggleBeat(8)">
+            <div class="beat" onclick="toggleBeat(7)">
                 <img src="images/volume.png" alt="Volume">
-                <p>Beat #7</p>
+                <p>Beat #3</p>
             </div>
-            <div class="volume-control" onclick="toggleBeat(8)">
+            <div class="beat" onclick="toggleBeat(8)">
                 <img src="images/volume.png" alt="Volume">
-                <p>Beat #8</p>
+                <p>Beat #4</p>
+            </div>
+        </div>
+        <div class="category dance-song">
+            <h2>Dance Songs</h2>
+            <div class="beat" onclick="toggleBeat(9)">
+                <img src="images/volume.png" alt="Volume">
+                <p>Beat #1</p>
+            </div>
+            <div class="beat" onclick="toggleBeat(10)">
+                <img src="images/volume.png" alt="Volume">
+                <p>Beat #2</p>
+            </div>
+            <div class="beat" onclick="toggleBeat(11)">
+                <img src="images/volume.png" alt="Volume">
+                <p>Beat #3</p>
+            </div>
+            <div class="beat" onclick="toggleBeat(12)">
+                <img src="images/volume.png" alt="Volume">
+                <p>Beat #4</p>
+            </div>
+        </div>
+        <div class="category extra">
+            <h2>Extra</h2>
+            <div class="beat" onclick="toggleBeat(13)">
+                <img src="images/volume.png" alt="Volume">
+                <p>Beat #1</p>
+            </div>
+            <div class="beat" onclick="toggleBeat(14)">
+                <img src="images/volume.png" alt="Volume">
+                <p>Beat #2</p>
+            </div>
+            <div class="beat" onclick="toggleBeat(15)">
+                <img src="images/volume.png" alt="Volume">
+                <p>Beat #3</p>
+            </div>
+            <div class="beat" onclick="toggleBeat(16)">
+                <img src="images/volume.png" alt="Volume">
+                <p>Beat #4</p>
             </div>
         </div>
     </div>
-    
 
     <p class="copyright">Copyright © Sync Sonic Limited 2024</p>
-    
 
     <script src="scripts/all.js"></script>
     <script src="scripts/music.js"></script>
