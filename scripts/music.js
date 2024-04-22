@@ -1,20 +1,26 @@
-var beats = []; 
+var beats = {};
 var currentAudio = null;
-var currentImg = null;
 
-function toggleBeat(beatNumber) {
+function toggleBeat(category, beatNumber) {
     var beatIndex = beatNumber - 1;
-    var beat = beats[beatIndex];
+    var categoryBeats = beats[category];
+
+    if (!categoryBeats) {
+        console.error('Category not found: ' + category);
+        return;
+    }
+
+    var beat = categoryBeats[beatIndex];
     var audio = beat.querySelector('audio');
     var img = beat.querySelector('img');
-    
+
     if (!audio) {
-        console.error('Audio element not found for beat ' + beatNumber);
         return;
     }
 
     if (currentAudio && currentAudio !== audio) {
         currentAudio.pause();
+        var currentImg = currentAudio.parentElement.querySelector('img');
         currentImg.src = "images/volume.png";
     }
 
@@ -22,31 +28,31 @@ function toggleBeat(beatNumber) {
         audio.play();
         img.src = "images/pause.png";
         currentAudio = audio;
-        currentImg = img;
     } else {
         audio.pause();
         img.src = "images/volume.png";
         currentAudio = null;
-        currentImg = null;
     }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
     var categoryContainers = document.querySelectorAll(".category");
 
-    categoryContainers.forEach(function(category) {
-        var categoryBeats = category.querySelectorAll(".beat");
-        beats.push(categoryBeats);
+    categoryContainers.forEach(function(categoryContainer) {
+        var categoryName = categoryContainer.classList[1];
+        var categoryBeats = categoryContainer.querySelectorAll(".beat");
+        beats[categoryName] = categoryBeats;
     });
 
-    beats = beats.flat(); // Flatten the array
-
-    beats.forEach(function(beat, index) {
-        beat.addEventListener("click", function() {
-            var categoryIndex = Math.floor(index / 4); // Since there are 4 beats per category
-            var beatIndex = index % 4; // Index of the beat within the category
-            var beatNumber = categoryIndex * 4 + beatIndex + 1; // Calculate the beat number
-            toggleBeat(beatNumber);
-        });
-    });
+    for (const category in beats) {
+        if (Object.hasOwnProperty.call(beats, category)) {
+            beats[category].forEach(function(beat, index) {
+                var beatNumber = index + 1;
+                var audio = document.createElement('audio');
+                audio.src = 'audio/' + category + '/beat ' + beatNumber + '.mp3';
+                audio.loop = true;
+                beat.appendChild(audio);
+            });
+        }
+    }
 });

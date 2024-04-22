@@ -21,8 +21,6 @@ function scrollToBottom() {
     });
 }
 
-
-
 function copyText() {
     var textToCopy = "syncsonics@gmail.com";
 
