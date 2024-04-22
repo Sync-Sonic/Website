@@ -17,6 +17,15 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 
+body, .volume-controls, .box-container, .meet-team, html {
+    background-image: url("https://cdn.discordapp.com/attachments/979714680715096114/1231679904152686592/Namnlos_design_6_2.png?ex=6637d64c&is=6625614c&hm=c209abc56159c6c6128cd0c8391a3091a584946afdc0745e6913c2b2ea3cda2e&");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
 .box-container, .container {
     display: flex;
     flex-wrap: wrap;
@@ -152,6 +161,11 @@ body::-webkit-scrollbar {
 }
 
 .about-box {
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
     background: #ffffff5d;
     color: white;
     border-radius: 8px;
@@ -187,7 +201,7 @@ body::-webkit-scrollbar {
     width: 200px;
     height: 1px;
     background-color: #8b8b8b93;
-    margin: -14px auto;
+    margin: -15px auto;
 }
 
 .work {

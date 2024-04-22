@@ -161,7 +161,7 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
         import { getDatabase, ref, set, push, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
-
+    
         const firebaseConfig = {
             apiKey: "AIzaSyCmGMnA7Z_pF-7Fdm1usartiWzWaEACMQQ",
             authDomain: "syncsonic-login.firebaseapp.com",
@@ -171,12 +171,12 @@
             appId: "1:661735880236:web:45fb5919b728dec9a7c389",
             measurementId: "G-EQWP4BFP18"
         };
-
+    
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
-
+    
         function incrementVisitCount() {
-            const visitCountRef = ref(db, "userdata/visitCount");
+            const visitCountRef = ref(db, "visitCount");
             runTransaction(visitCountRef, (visitCount) => {
                 return (visitCount || 0) + 1;
             }).then(() => {
@@ -185,36 +185,17 @@
                 console.error("Error incrementing visit count:", error);
             });
         }
-
-        function saveDeviceInfo(deviceInfo) {
-            const devicesRef = ref(db, "userdata/devices");
-            const newDeviceInfoRef = push(devicesRef);
-            set(newDeviceInfoRef, deviceInfo).then(() => {
-                console.log("Device information saved successfully.");
-            }).catch((error) => {
-                console.error("Error saving device information:", error);
-            });
-        }
-        const deviceInfo = {
-            userAgent: navigator.userAgent,
-            platform: navigator.platform,
-            language: navigator.language,
-            screenWidth: window.screen.width,
-            screenHeight: window.screen.height,
-            visitTimestamp: new Date().toISOString()
-        };
-
+    
         document.addEventListener("DOMContentLoaded", function() {
             incrementVisitCount();
-            saveDeviceInfo(deviceInfo);
         });
-
-        const visitCountRef = ref(db, "userdata/visitCount");
+    
+        const visitCountRef = ref(db, "visitCount");
         onValue(visitCountRef, (snapshot) => {
             const visitCount = snapshot.val();
             console.log("Visit count:", visitCount);
         });
-    </script>
+    </script>    
 
     <script src="scripts/main.js"></script>
     <script src="scripts/all.js"></script>
