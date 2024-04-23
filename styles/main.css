@@ -301,9 +301,3 @@ body::-webkit-scrollbar {
     line-height: 2.5rem;
     letter-spacing: 0.6rem;
 }
-
-@media only screen and (max-width: 700px) {
-    .check-out-our-work {
-        display: none;
-    }
-}
