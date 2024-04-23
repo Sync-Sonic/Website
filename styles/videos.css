@@ -19,7 +19,7 @@
     border: 5px solid rgba(255, 255, 255, 0.493);
     border-radius: 18px;
     overflow: hidden;
-    margin: 400px 10px 10px 10px; /* Adjusted margin to move the video containers higher up */
+    margin: 400px auto 10px auto;
 }
 
 
