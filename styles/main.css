@@ -45,41 +45,54 @@ body::-webkit-scrollbar {
     height: calc(100% - 120px);
 }
 
-.box {
-    position: relative;
-    width: 245px;
-    height: 245px;
-    border-radius: 10px;
-    background-color: #0000005d;
-    margin: 50px auto;
+.box-container {
+    font-size: 20px;
 }
 
-.image-container {
-    position: absolute;
-    top: 0;
-    left: 0;
+.box {
+    width: 15rem;
+    display: block;
+    margin: 100px auto;
+}
+
+img {
+    border-radius: 40px;
     width: 100%;
     height: 100%;
+}
+
+.img-container {
     display: flex;
     justify-content: center;
     align-items: center;
-} 
-
-.details {
-    font-size: 28px;
-    position: absolute;
-    bottom: -180px;
-    left: 0;
-    width: 110%;
-    margin-left: -10px;
-    text-align: center;
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    background-color: #00000033;
+    border-radius: 20px;
 }
 
+.divider {
+    margin: 0px 30px;
+    height: 0px;
 
-.box img {
-    width: 90%;
-    height: 90%;
-    border-radius: 30%;
+    border: none;
+    height: 1px;
+    background-color: #333;  /* Modern Browsers */
+}
+
+.details {
+    color: white;
+    padding: 0px 10px;
+    height: 100%;
+}
+
+p {
+    margin: 0px;
+}
+
+.details-tag {
+    margin: 8px 0px;
 }
 
 .footer {
@@ -223,7 +236,7 @@ body::-webkit-scrollbar {
 
 .instagram {
     width: 40px;
-    margin: 10px;
+    margin: 50px;
 }
 
 .fa-instagram {
@@ -300,12 +313,15 @@ body::-webkit-scrollbar {
 }
 
 
-@media screen and (max-width: 768px) {
-    .meet-team {
-        margin-top: 180px; 
+@media screen and (max-width: 980px) {
+    .box {
+        width: 220px;
+        height: 220px;
     }
+}
 
+@media screen and (max-width: 880px) {
     .check-out-our-work {
-        margin-top: 180px; 
+        margin-top: 300px; 
     }
 }
