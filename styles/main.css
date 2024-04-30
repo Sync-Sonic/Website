@@ -45,54 +45,43 @@ body::-webkit-scrollbar {
     height: calc(100% - 120px);
 }
 
-.box-container {
-    font-size: 20px;
-}
-
 .box {
-    width: 15rem;
-    display: block;
-    margin: 100px auto;
+    position: relative;
+    width: 245px;
+    height: 245px;
+    border-radius: 10px;
+    background-color: #0000005d;
+    margin: 50px auto;
 }
 
-img {
-    border-radius: 40px;
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-}
-
-.img-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
-    height: 250px;
-    padding: 10px;
-    background-color: #00000033;
-    border-radius: 20px;
-}
-
-.divider {
-    margin: 0px 30px;
-    height: 0px;
-
-    border: none;
-    height: 1px;
-    background-color: #333;  /* Modern Browsers */
-}
+} 
 
 .details {
-    color: white;
-    padding: 0px 10px;
-    height: 100%;
+    font-size: 28px;
+    position: absolute;
+    bottom: -180px;
+    left: 0;
+    width: 110%;
+    margin-left: -10px;
+    text-align: center;
 }
 
-p {
-    margin: 0px;
-}
 
-.details-tag {
-    margin: 8px 0px;
+.box img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 90%;
+    height: 90%;
+    border-radius: 30%;
 }
 
 .footer {
@@ -196,6 +185,7 @@ p {
     width: 80%;
     max-width: 1000px;
     text-align: center;
+    align-items: center;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.9);
 }
 
@@ -312,16 +302,113 @@ p {
     letter-spacing: 0.6rem;
 }
 
+@media screen and (max-width: 896px) {
 
-@media screen and (max-width: 980px) {
     .box {
-        width: 220px;
-        height: 220px;
+        height: 200px;
+        width: 200px;
+    }
+    .details {
+        
+        font-size: 15px;
+        bottom: -115px;
+        left: 8px;
+    }
+    
+    .fa-instagram {
+        font-size: 28px;
+    }
+
+    .lines {
+        width: 40px;
+    }
+
+    .contact-us-box {
+        padding: 10px;
+        background-color: #ffffff;
+        width: 300px;
+        color: #333;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        margin: 125px auto 0;
+    }
+
+    .check-out-our-work {
+        margin-top: 150px;
+        font-size: 30px;
     }
 }
 
-@media screen and (max-width: 880px) {
-    .check-out-our-work {
-        margin-top: 300px; 
+@media screen and (max-width: 630px) {
+
+    .footer-box {
+        width: 150px;
+        height: 40px;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .video-container {
+        position: relative;
+        width: 25%;
+        left: -10px;
+        height: 200px;
+        border: 5px solid rgba(255, 255, 255, 0.493);
+        border-radius: 18px;
+        overflow: hidden;
+        margin: 200px auto 10px auto;
+    }
+}
+
+@media screen and (max-width: 408px) {
+
+    .footer-box {
+        width: 100px;
+        height: 40px;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .video-container {
+        position: relative;
+        width: 25%;
+        height: 100px;
+        border: 5px solid rgba(255, 255, 255, 0.493);
+        border-radius: 18px;
+        overflow: hidden;
+        margin: 100px auto 10px auto;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .box {
+        height: 150px;
+        width: 150px;
+    }
+    .details {
+        
+        font-size: 13px;
+        bottom: -115px;
+        left: 8px;
+    }
+    
+    .fa-instagram {
+        font-size: 24px;
+    }
+
+    .lines {
+        width: 40px;
+    }
+
+    .contact-us-box {
+        padding: 10px;
+        background-color: #ffffff;
+        width: 280px;
+        color: #333;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        margin: 125px auto 0;
     }
 }
