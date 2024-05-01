@@ -302,6 +302,14 @@ body::-webkit-scrollbar {
     letter-spacing: 0.6rem;
 }
 
+@media screen and (max-width: 980px) {
+    .check-out-our-work {
+        margin-top: 230px;
+    }
+    .box {
+        margin: 100px auto;
+    }
+}
 @media screen and (max-width: 896px) {
 
     .box {
@@ -334,8 +342,8 @@ body::-webkit-scrollbar {
     }
 
     .check-out-our-work {
-        margin-top: 150px;
-        font-size: 30px;
+        margin-top: -30px;
+        font-size: 40px;
     }
 }
 
@@ -357,6 +365,9 @@ body::-webkit-scrollbar {
         border-radius: 18px;
         overflow: hidden;
         margin: 200px auto 10px auto;
+    }
+    .check-out-our-work {
+        font-size: 30px;
     }
 }
 
@@ -384,8 +395,9 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 400px) {
 
     .box {
-        height: 150px;
-        width: 150px;
+        height: 120px;
+        width: 120px;
+        margin: 30px;
     }
     .details {
         
@@ -410,5 +422,35 @@ body::-webkit-scrollbar {
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         margin: 125px auto 0;
+    }
+}
+
+
+@media screen and (max-width: 797px) {
+    .check-out-our-work {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (height: 1180px) {
+    .check-out-our-work {
+        margin-top: -300px;
+    }
+}
+@media screen and (height: 1280px) {
+    .check-out-our-work {
+        margin-top: -500px;
+    }
+}
+
+@media screen and (width: 1024px) {
+    .check-out-our-work {
+        margin-top: 200px;
+    }
+}
+
+@media screen and (height: 1366px) {
+    .check-out-our-work {
+        margin-top: -350px;
     }
 }
