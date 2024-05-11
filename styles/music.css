@@ -1,13 +1,3 @@
-body, .html {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url("https://cdn.discordapp.com/attachments/979714680715096114/1231993392410394654/Namnlos_design_9.png?ex=6638fa42&is=66268542&hm=a1daea300d0cdb822dd2d1b681e6b08c9f428f99223390c95e36af52083227f3&");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
 .categories {
     display: flex;
     flex-wrap: wrap;
