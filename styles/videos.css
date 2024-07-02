@@ -43,7 +43,7 @@ body, html {
     /* Remove scrollbar */
     scrollbar-width: none;
     -ms-overflow-style: none;
-    background-image: url("https://cdn.discordapp.com/attachments/979714680715096114/1231991558044254238/Namnlos_design_8.png?ex=6638f88c&is=6626838c&hm=2fa739fe80a1801408ba4231541c5df481bb45f2f6309f79c9c0c9d0d9177df4&");
+    background-image: url("../images/background_2.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
