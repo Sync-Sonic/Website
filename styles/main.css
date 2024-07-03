@@ -68,7 +68,7 @@ body::-webkit-scrollbar {
 .details {
     font-size: 28px;
     position: absolute;
-    bottom: -180px;
+    bottom: -200px;
     left: 0;
     width: 110%;
     margin-left: -10px;
@@ -213,7 +213,7 @@ body::-webkit-scrollbar {
     width: 200px;
     height: 1px;
     background-color: #8b8b8b93;
-    margin: -15px auto;
+    margin: -5px auto;
 }
 
 .work {
